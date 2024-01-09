@@ -296,14 +296,42 @@ export default function Home() {
 												<input 
 													name = 'quantity'
 													type='number'
+													min='0'
 													value={item.quantity} 
 													className='form-control'
 													onChange={(event) => handleItemInputChange(event, index)}
 													/>			
 											</td>
-											<td>{item.unit_price}</td>
-											<td>{item.tax}</td>
-											<td>{item.total}</td>
+											<td>
+												<input 
+													name = 'unit_price' 
+													type='number'
+													min='0'
+													value={item.unit_price}
+													className='form-control'
+													onChange={(event) => handleItemInputChange(event, index)}
+													/>												
+											</td>
+											<td>
+												<input 
+													name='tax'
+													type='number'
+													min='0'
+													value={item.tax}
+													className='form-control'
+													onChange={(event) => handleItemInputChange(event, index)}
+													/>
+											</td>
+											<td>
+												<input 
+													name='total'
+													type='number'
+													min='0'
+													value={item.total}
+													className='form-control'
+													onChange={(event) => handleItemInputChange(event, index)}
+													/>									
+											</td>
 											<td 
 												style={{cursor:'pointer'}} 
 												onClick={() => handleDeleteItem(index)}>
