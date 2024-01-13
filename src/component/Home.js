@@ -1,7 +1,7 @@
 import '../App.css';
 import Table from 'react-bootstrap/Table';
 import { useState } from 'react';
-import { ArrowsExpand, Trash } from 'react-bootstrap-icons';
+import { Trash } from 'react-bootstrap-icons';
 import { useNavigate } from 'react-router-dom';
 import { useRef } from 'react';
 import {getGlobalValidationError, setGlobalValidationError} from './globalValidationError.js'
@@ -93,7 +93,7 @@ export default function Home() {
 		console.log(items)
 		validate()		
 		if ( ! getGlobalValidationError() )
-		submitForm()	
+		submitForm()	  
 	
 	}
 
@@ -535,9 +535,14 @@ export default function Home() {
 								</div>
 							</div>
 						</div>					
-						<div className='col-4'>						
+						<div className='col-4'>	
+								
 						</div>
 					</div>	
+					<div>
+						<hr/>
+						<h3>Choose template:</h3>
+					</div>
 					<div className='text-center pt-3 pb-5'>
 						<hr/>
 					
